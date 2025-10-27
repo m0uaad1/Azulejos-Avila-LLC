@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HUNANIMA — Machines Agricoles Simples</title>
-  <meta name="description" content="HUNANIMA — machines agricoles simples et fiables. Récolte, fourrage et outils pour petites parcelles avec support clair et prix équitable."/>
+  <title>Azulejos Avila LLC — Handcrafted Tiles</title>
+  <meta name="description" content="Azulejos Avila LLC — artisanal azulejo tiles, design, and installation in Palmdale, CA. Classic blue & white ceramics, custom patterns, and restoration."/>
   <style>
     :root{
-      --primary:#1B7F3A;   /* Vert */
-      --accent:#FFD300;    /* Jaune */
-      --nav:#0E4D25;       /* Vert foncé */
-      --ink:#0b0b0b;
-      --muted:#58636f;
+      --primary:#1e40af;   /* Azulejo Blue */
+      --accent:#f59e0b;    /* Warm gold accent */
+      --ink:#0f172a;
+      --muted:#64748b;
       --card:#ffffff;
-      --bg:#ffffff;
+      --bg:#fafcff;
+      --ring: rgba(30,64,175,.18);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{max-width:1100px;margin:0 auto;padding:24px}
 
     /* Header */
-    header{background:var(--nav); color:#fff; position:sticky; top:0; z-index:10; box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    header{background:var(--primary); color:#fff; position:sticky; top:0; z-index:10; box-shadow:0 6px 18px rgba(0,0,0,.18)}
     .topbar{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px}
-    .brand{font-weight:900; letter-spacing:.35px}
-    nav a{display:inline-block; padding:10px 14px; border-radius:12px; color:#eaffea; font-weight:700}
-    nav a:hover{background:rgba(255,255,255,.12)}
-    .cta-btn{background:var(--accent); color:#1a1500; padding:10px 14px; border-radius:12px; font-weight:800}
+    .brand{font-weight:900; letter-spacing:.4px; color:#c7d2fe}
+    nav a{display:inline-block; padding:10px 14px; border-radius:12px; color:#e0e7ff; font-weight:700}
+    nav a:hover{background:rgba(255,255,255,.14)}
+    .cta-btn{background:var(--accent); color:#1a1200; padding:10px 14px; border-radius:12px; font-weight:800}
 
-    /* Hero (animated card) */
-    .hero-wrap{background:linear-gradient(180deg,#ffffff,#f2fff6); padding:42px 24px}
+    /* Hero */
+    .hero-wrap{background:linear-gradient(180deg,#fff,#eef2ff); padding:42px 24px}
     .hero-card{
-      background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:22px;
-      box-shadow:0 30px 60px rgba(0,0,0,.12); padding:28px;
-      display:grid; grid-template-columns:1.15fr .85fr; gap:22px; overflow:hidden;
+      background:var(--card); border:1px solid rgba(0,0,0,.08); border-radius:22px;
+      box-shadow:0 30px 60px rgba(0,0,0,.15); padding:28px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:22px; overflow:hidden;
       transform:translateY(24px); opacity:0; animation:cardIn .9s ease-out .15s forwards;
     }
     @keyframes cardIn{to{transform:translateY(0);opacity:1}}
-    .hero-badge{display:inline-flex; align-items:center; gap:10px; background:#0e3a1d; color:var(--accent); padding:6px 12px; border-radius:999px; font-size:.9rem; font-weight:800}
+    .hero-badge{display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:#1a1200;
+      padding:6px 12px; border-radius:999px; font-size:.9rem; font-weight:800; box-shadow:0 0 0 6px var(--ring)}
     .hero-title{font-size:clamp(26px,4vw,42px); line-height:1.15; margin:14px 0 10px; font-weight:900}
-    .hero-title .grad{background:linear-gradient(90deg,var(--primary),#2fc368); -webkit-background-clip:text; color:transparent}
-    .hero-sub{font-size:1.02rem; color:#2f3540}
+    .hero-title .grad{background:linear-gradient(90deg,var(--primary),var(--accent)); -webkit-background-clip:text; color:transparent}
+    .hero-sub{font-size:1.02rem; color:#334155}
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
-    .btn{border:2px solid #0e3a1d; color:#fff; background:#0e3a1d; padding:12px 18px; border-radius:14px; font-weight:800}
-    .btn:hover{transform:translateY(-1px); box-shadow:0 8px 16px rgba(0,0,0,.15)}
-    .btn.secondary{background:var(--accent); color:#1a1500; border-color:var(--accent)}
-    .hero-media{border-radius:18px; overflow:hidden; aspect-ratio:4/3; background:#f6fff8;
+    .btn{border:2px solid var(--primary); color:#fff; background:var(--primary); padding:12px 18px; border-radius:14px; font-weight:800}
+    .btn.secondary{background:var(--accent); border-color:var(--accent); color:#1a1200}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 8px 16px rgba(0,0,0,.2)}
+    .hero-media{border-radius:18px; overflow:hidden; aspect-ratio:4/3; background:#eef2ff;
       display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:8px}
     .hero-media img{object-fit:cover; width:100%; height:100%}
 
     /* Sections */
     section{padding:56px 24px}
-    section h2{font-size:clamp(22px,3vw,32px); margin:0 0 14px; font-weight:900}
+    section h2{font-size:clamp(22px,3vw,32px); margin:0 0 14px; font-weight:900; color:var(--primary)}
     .muted{color:var(--muted)}
 
     /* Cards */
     .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
-    .card{border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:16px; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,.06);
-      transform:translateY(14px); opacity:0}
+    .card{border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:16px; background:#fff;
+      box-shadow:0 8px 24px rgba(0,0,0,.06); transform:translateY(14px); opacity:0}
     .card.reveal{animation:reveal .7s ease-out forwards}
     @keyframes reveal{to{transform:translateY(0); opacity:1}}
 
@@ -66,17 +68,12 @@
     .gallery{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
     .gallery img{border-radius:14px; aspect-ratio:4/3; object-fit:cover}
 
-    /* Formula */
-    .formula{border-left:6px solid var(--accent); background:#fff9ce; padding:16px 18px; border-radius:12px}
-    .formula ol{margin:0; padding-left:18px}
-    .formula li{margin:8px 0}
-
     /* Contact */
-    .contact-box{background:var(--primary); color:#fff; border-radius:18px; padding:20px; display:grid; gap:8px; border:1px solid rgba(0,0,0,.12)}
+    .contact-box{background:var(--accent); color:#1a1200; border-radius:18px; padding:20px; display:grid; gap:8px; border:1px solid rgba(0,0,0,.06)}
     .contact-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
-    .contact-actions a{display:inline-block; background:var(--accent); color:#1a1500; padding:10px 14px; border-radius:12px; font-weight:800}
+    .contact-actions a{display:inline-block; background:var(--primary); color:#fff; padding:10px 14px; border-radius:12px; font-weight:800}
 
-    footer{background:#0e3a1d; color:var(--accent); padding:18px; text-align:center; font-weight:700}
+    footer{background:#0b1220; color:#c7d2fe; padding:18px; text-align:center; font-weight:700}
 
     @media (max-width:820px){
       .hero-card{grid-template-columns:1fr; padding:20px}
@@ -89,12 +86,11 @@
   <!-- Header -->
   <header>
     <div class="topbar container">
-      <div class="brand">HUNANIMA</div>
+      <div class="brand">Azulejos Avila LLC</div>
       <nav>
-        <a href="#about">À propos</a>
-        <a href="#products">Produits</a>
-        <a href="#gallery">Galerie</a>
-        <a href="#formula">Notre Formule</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact" class="cta-btn">Contact</a>
       </nav>
     </div>
@@ -105,22 +101,25 @@
     <div class="container">
       <div class="hero-card">
         <div>
-          <span class="hero-badge">Machines Agricoles Simples</span>
-          <h1 class="hero-title">Travaillez malin. <span class="grad">Faites croître sûrement.</span></h1>
-          <p class="hero-sub">Équipements compacts, fiables et faciles à entretenir pour petites et moyennes exploitations — récolte, fourrage et manutention simplifiés.</p>
+          <span class="hero-badge">Tiles • Design • Installation</span>
+          <h1 class="hero-title">Tradition meets modern <span class="grad">craftsmanship.</span></h1>
+          <p class="hero-sub">
+            We create and install beautiful <strong>azulejo</strong> tilework—backsplashes, feature walls, stairs,
+            fountains, and more—bringing timeless Portuguese style to California homes.
+          </p>
           <div class="hero-actions">
-            <a class="btn" href="#products">Découvrir nos Produits</a>
-            <a class="btn secondary" href="#contact">Demander un Devis</a>
+            <a class="btn" href="#services">See Services</a>
+            <a class="btn secondary" href="#contact">Get a Quote</a>
           </div>
           <p class="muted" style="margin-top:10px;">
-            Avenue Baratier, 95160 Montmorency • +33 7 38 50 26 36 • admin@tyusex.shop
+            +1 432 322 1772 • service@eelamdi.shop
           </p>
         </div>
         <div class="hero-media">
-          <img src="https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg" alt="Champ & tracteur">
-          <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse">
-          <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Outil de fourrage">
-          <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Équipement de silo">
+          <img src="https://avatars.dzeninfra.ru/get-zen_doc/2957013/pub_6041caf83e8e522ea5b4d3ab_6041cddd2bb74f6b4fd37cab/scale_1200" alt="Blue and white azulejo wall">
+          <img src="https://avatars.mds.yandex.net/i?id=1be07557ffc7bf6d32fbb52b5f6c7e70-5886161-images-thumbs&ref=rim&n=33&w=360&h=400" alt="Artisan painting tile pattern">
+          <img src="https://www.xviii.pt/public/img/insta/xviii-azulejos2@2x.jpg" alt="Traditional tile panel detail">
+          <img src="https://avatars.dzeninfra.ru/get-zen_doc/2957013/pub_6041caf83e8e522ea5b4d3ab_6041cddd2bb74f6b4fd37cab/scale_1200" alt="Decorative tile composition">
         </div>
       </div>
     </div>
@@ -128,69 +127,50 @@
 
   <!-- About -->
   <section id="about" class="container">
-    <h2>À propos de nous</h2>
+    <h2>About Us</h2>
     <p class="muted">
-      HUNANIMA conçoit des machines agricoles pratiques, avec des commandes simples et une maintenance facile.  
-      Notre objectif : des outils qui démarrent chaque matin et font gagner des heures aux champs.
+      Based in Palmdale, we’re a small studio dedicated to the art of azulejos—hand-painted ceramic tiles
+      known for their deep cobalt blues and intricate motifs. From custom murals to precise installations,
+      we manage the full process end-to-end.
     </p>
     <div class="cards" style="margin-top:12px">
-      <article class="card reveal" style="animation-delay:.00s"><strong>Fiabilité :</strong> Moins de capteurs, mécanique éprouvée, entretien simple.</article>
-      <article class="card reveal" style="animation-delay:.08s"><strong>Adaptabilité :</strong> Accessoires pour récolte, fourrage et manutention.</article>
-      <article class="card reveal" style="animation-delay:.16s"><strong>Support :</strong> Conseils pièces et entretien.</article>
-      <article class="card reveal" style="animation-delay:.24s"><strong>Valeur :</strong> Spécifications solides sans extras inutiles.</article>
+      <article class="card reveal"><strong>Handcrafted:</strong> Every pattern sketched, glazed, and fired with care.</article>
+      <article class="card reveal"><strong>Custom Work:</strong> Monograms, dates, and site-specific murals available.</article>
+      <article class="card reveal"><strong>Durable Finish:</strong> Sealed surfaces designed for kitchens, baths, and outdoors.</article>
+      <article class="card reveal"><strong>Precise Install:</strong> Leveling, spacing, and grout selection to match your style.</article>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="container">
-    <h2>Produits</h2>
+  <!-- Services -->
+  <section id="services" class="container">
+    <h2>Services</h2>
     <div class="cards">
-      <article class="card reveal" style="animation-delay:.00s">
-        <h3>Mini Moissonneuse</h3>
-        <p>Récolte compacte pour petites parcelles ; transmission simple et faible consommation.</p>
+      <article class="card reveal">
+        <h3>Design & Sampling</h3>
+        <p>Moodboards, pattern iterations, and glaze swatches to finalize your vision.</p>
       </article>
-      <article class="card reveal" style="animation-delay:.08s">
-        <h3>Outils de Fourrage</h3>
-        <p>Accessoires de coupe et ramassage adaptés aux tracteurs de puissance moyenne.</p>
+      <article class="card reveal">
+        <h3>Custom Tile Panels</h3>
+        <p>Murals, family crests, and statement walls for entries and courtyards.</p>
       </article>
-      <article class="card reveal" style="animation-delay:.16s">
-        <h3>Silos & Manutention</h3>
-        <p>Chargeurs et vis de silo avec commandes simples.</p>
+      <article class="card reveal">
+        <h3>Installation</h3>
+        <p>Substrate prep, waterproofing, and meticulous layout for longevity.</p>
       </article>
-      <article class="card reveal" style="animation-delay:.24s">
-        <h3>Kits de Service</h3>
-        <p>Filtres, courroies et fluides regroupés pour maximiser le temps de fonctionnement.</p>
+      <article class="card reveal">
+        <h3>Restoration</h3>
+        <p>Color-matched replacements and repairs for historic or worn sections.</p>
       </article>
     </div>
   </section>
 
   <!-- Gallery -->
   <section id="gallery" class="container">
-    <h2>Galerie</h2>
+    <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg" alt="Tracteur au champ">
-      <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse gros plan">
-      <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Équipement de fourrage">
-      <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Chargeur de silo">
-    </div>
-  </section>
-
-  <!-- Notre Formule -->
-  <section id="formula" class="container">
-    <h2>Notre Formule (10 Points Clés)</h2>
-    <div class="formula">
-      <ol>
-        <li><strong>Design Simple :</strong> Commandes intuitives, pièces accessibles.</li>
-        <li><strong>Taille Adaptée :</strong> Puissance calibrée aux parcelles et tâches.</li>
-        <li><strong>Économie de Carburant :</strong> Moteurs et transmissions efficaces.</li>
-        <li><strong>Durabilité :</strong> Pièces d’usure renforcées ; pièces de rechange faciles.</li>
-        <li><strong>Sécurité :</strong> Protections, prise de force sécurisée, étiquettes claires.</li>
-        <li><strong>Maintenance :</strong> Kits de service et plannings inclus.</li>
-        <li><strong>Polyvalence :</strong> Un tracteur, plusieurs accessoires.</li>
-        <li><strong>Disponibilité :</strong> Devis rapides et délais réalistes.</li>
-        <li><strong>Formation :</strong> Initiation simple à la livraison.</li>
-        <li><strong>Suivi :</strong> Assistance téléphonique/email et conseils pièces.</li>
-      </ol>
+      <img src="https://avatars.dzeninfra.ru/get-zen_doc/2957013/pub_6041caf83e8e522ea5b4d3ab_6041cddd2bb74f6b4fd37cab/scale_1200" alt="Azulejo wall closeup">
+      <img src="https://avatars.mds.yandex.net/i?id=1be07557ffc7bf6d32fbb52b5f6c7e70-5886161-images-thumbs&ref=rim&n=33&w=360&h=400" alt="Tile artisan at work">
+      <img src="https://www.xviii.pt/public/img/insta/xviii-azulejos2@2x.jpg" alt="Large tile mural">
     </div>
   </section>
 
@@ -198,26 +178,26 @@
   <section id="contact" class="container">
     <h2>Contact</h2>
     <div class="contact-box">
-      <div><strong>Entreprise :</strong> HUNANIMA</div>
-      <div><strong>Domaine :</strong> Machines Agricoles Simples</div>
-      <div><strong>Adresse :</strong> Avenue Baratier, 95160 Montmorency, France</div>
-      <div><strong>Téléphone :</strong> +33 7 38 50 26 36</div>
-      <div><strong>Email :</strong> admin@tyusex.shop</div>
+      <div><strong>Company:</strong> Azulejos Avila LLC</div>
+      <div><strong>Domain:</strong> Handcrafted Tiles & Installation</div>
+      <div><strong>Phone:</strong> +1 432 322 1772</div>
+      <div><strong>Email:</strong> service@eelamdi.shop</div>
+      <div><strong>Address:</strong> Sunnyvale Ln, Palmdale, CA 93552, United States</div>
       <div class="contact-actions">
-        <a href="mailto:admin@tyusex.shop?subject=Demande%20-%20HUNANIMA%20Machines%20Agricoles" target="_blank" rel="noopener">Envoyer un Email</a>
-        <a href="tel:+33738502636">Appeler</a>
-        <a href="https://wa.me/33738502636" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Avenue+Baratier+95160+Montmorency" target="_blank" rel="noopener">Ouvrir la Carte</a>
+        <a href="mailto:service@eelamdi.shop?subject=Tile%20Project%20Inquiry%20-%20Azulejos%20Avila%20LLC" target="_blank" rel="noopener">Email Us</a>
+        <a href="tel:+14323221772">Call Now</a>
+        <a href="https://wa.me/14323221772" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#services">See Services</a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 HUNANIMA — Tous droits réservés
+    © 2025 Azulejos Avila LLC — All rights reserved
   </footer>
 
   <script>
-    // Apparition progressive des cartes
+    // Reveal cards on scroll
     const observer = new IntersectionObserver(entries=>{
       entries.forEach(e=>{
         if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
